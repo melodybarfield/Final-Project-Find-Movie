@@ -41,6 +41,10 @@ li {
   color: rgba(0, 88, 207);
 }
 
+.light-blue {
+  color: rgba(65, 153, 248);
+}
+
 .section__title {
   display: flex;
   justify-content: center;
