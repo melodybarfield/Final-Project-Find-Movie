@@ -41,6 +41,22 @@ li {
   color: rgba(0, 88, 207);
 }
 
+.section__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 56px;
+  padding: 16px;
+}
+
+.section__sub-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  padding: 8px;
+}
+
 .img__wrapper {
   height: 100%;
   display: flex;
