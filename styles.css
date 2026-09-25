@@ -37,6 +37,10 @@ li {
   color: rgba(234, 154, 42);
 }
 
+.blue {
+  color: rgba(0, 88, 207);
+}
+
 .img__wrapper {
   height: 100%;
   display: flex;
@@ -54,7 +58,6 @@ li {
 }
 
 .link {
-  color: rgba(234, 154, 42);
   font-size: 24px;
   font-weight: 600;
   margin-left: 16px;
