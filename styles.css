@@ -44,8 +44,6 @@ li {
 .row {
   width: 100%;
   max-width: 1200px;
-  display: flex;
-  flex-wrap: wrap;
   margin: 0px auto;
 }
 
@@ -75,6 +73,7 @@ li {
   align-items: center;
   font-size: 36px;
   padding: 8px;
+  -webkit-text-stroke: 0.5px rgba(234, 154, 42);
 }
 
 .img__wrapper {
@@ -111,24 +110,21 @@ main .section__sub-title {
   margin-bottom: 32px;
 }
 
-.input--wrapper {
-  width: 100%;
-  position: relative;
+.input__wrapper {
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
 .searchbar {
-  background-color: rgb(250, 250, 250);
+  background-color: #f2f2f2;
   border-radius: 20px;
   border: 4px solid rgba(234, 154, 42);
   padding: 0px 15px 0px 25px;
   color: rgba(0, 88, 207);
   font-size: 24px;
   font-weight: 500;
-  display: inline-block;
   height: 70px;
   line-height: 40px;
-  width: 100px;
-  margin: 0 auto;
+  width: 400px;
 }
