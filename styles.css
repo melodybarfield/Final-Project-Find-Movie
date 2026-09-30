@@ -31,6 +31,8 @@ ul {
 }
 
 li {
+  display: flex;
+  align-items: center;
   list-style-type: none;
   padding-left: 16px;
 }
@@ -55,7 +57,7 @@ li {
   color: rgba(0, 31, 96);
 }
 
-.light-blue {
+.light-gold {
   color: rgba(240, 188, 82);
 }
 
@@ -91,11 +93,16 @@ li {
   margin: 0 auto;
 }
 
-.link {
+.nav__link {
   font-size: 24px;
   font-weight: 600;
   margin-left: 16px;
   padding: 8px;
+}
+
+.nav__link--primary {
+  font-size: 28px;
+  padding: 16px 0;
 }
 
 /* LANDING PAGE */
