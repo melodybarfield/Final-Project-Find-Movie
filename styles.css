@@ -181,6 +181,7 @@ li {
 }
 
 .menu__link {
+  position: relative;
   font-size: 28px;
   color: rgba(216, 122, 2);
   font-weight: 600;
@@ -188,6 +189,21 @@ li {
   margin: 8px;
   padding-bottom: 4px;
   border-bottom: 2px solid transparent;
+}
+
+.menu__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 4px;
+  background: rgba(216, 122, 2);
+  transition: width 0.3s ease;
+}
+
+.menu__link:hover::after {
+  width: 100%;
 }
 
 .light___StyledCloseIcon-lj69nl-14 {
