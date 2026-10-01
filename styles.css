@@ -10,6 +10,7 @@
 body {
   background-color: rgba(0, 65, 177);
   max-width: 100vw;
+  overflow-x: hidden;
 }
 
 nav {
@@ -62,7 +63,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 60px;
+  font-size: 72px;
   padding: 16px;
   text-shadow: 4px 4px 8px rgba(0, 31, 96);
 }
@@ -71,10 +72,21 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 36px;
+  font-size: 44px;
   padding: 8px;
-  -webkit-text-stroke: 0.5px rgba(234, 154, 42);
+  /* -webkit-text-stroke: 0.5px rgba(234, 154, 42); */
   /* text-shadow: 2px 2px 2px rgba(234, 154, 42); */
+  color: rgba(243, 189, 119);
+  background: linear-gradient(
+    90deg,
+    rgba(234, 154, 42, 0.7),
+    rgba(234, 154, 42, 0.3),
+    rgba(234, 154, 42, 0.7)
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 2.5s infinite;
 }
 
 .img__wrapper {
@@ -108,6 +120,87 @@ li {
 .nav__link--primary {
   font-size: 28px;
   padding: 16px 0;
+}
+
+/* HAMBURGER MENU BACKDROP */
+
+.btn__menu {
+  background-color: transparent;
+  font-size: 56px;
+  text-align: center;
+  border: none;
+  display: none;
+  transition: all 300ms ease;
+}
+
+.btn__menu--svg {
+  width: 40px;
+  height: 40px;
+  color: rgba(216, 122, 2);
+}
+
+.menu__backdrop {
+  position: absolute;
+  background-color: rgba(252, 241, 163);
+  color: rgba(216, 122, 2);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms ease;
+  visibility: hidden;
+  opacity: 0;
+  border: 1px solid rgb(229, 231, 235);
+  border-radius: 8px;
+}
+
+.menu--open .menu__backdrop {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu--open {
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
+.menu__links {
+  width: 100%;
+  height: 100%;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__list {
+  padding: 32px 0;
+}
+
+.menu__link {
+  font-size: 28px;
+  color: rgba(216, 122, 2);
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 8px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.light___StyledCloseIcon-lj69nl-14 {
+  width: 40px;
+  height: 40px;
+}
+
+.btn__menu--close {
+  position: absolute;
+  top: 24px;
+  right: 16px;
+  padding: 8px;
+  color: rgba(216, 122, 2);
 }
 
 /* LANDING PAGE */
@@ -150,4 +243,33 @@ main .section__sub-title {
 
 .findMovie-btn:hover {
   transform: scale(1.1);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -100%;
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  50% {
+    background-position: 100%;
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+  100% {
+    background-position: -100%;
+    opacity: 0.9;
+    transform: scale(1);
+  }
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 1024px) {
+  .btn__menu {
+    display: block;
+  }
+
+  .nav__link-list {
+    display: none;
+  }
 }
