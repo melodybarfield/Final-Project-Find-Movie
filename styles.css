@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -38,6 +40,11 @@ li {
   padding-left: 16px;
 }
 
+.serif-font {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
 .container {
   padding: 56px 0;
 }
@@ -64,9 +71,24 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 72px;
-  padding: 16px;
-  text-shadow: 4px 4px 8px rgba(0, 31, 96);
+  font-size: 80px;
+  background: linear-gradient(
+    to bottom,
+    #fff8c7 0%,
+    #ffd700 30%,
+    #f2b800 65%,
+    #a66b00 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    1px 1px 0 #d09500,
+    2px 2px 0 #b47a00,
+    3px 3px 0 #8c5e00,
+    5px 5px 10px rgba(0, 0, 0, 0.45),
+    0 0 20px rgba(255, 215, 0, 0.35);
 }
 
 .section__sub-title {
@@ -74,10 +96,14 @@ li {
   justify-content: center;
   align-items: center;
   font-size: 44px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
   padding: 8px;
+  margin: 16px 32px 16px 16px;
   position: relative;
-  color: rgba(234, 154, 42, 0.7);
-  background: linear-gradient(
+  color: #f5d77a;
+}
+/* background: linear-gradient(
     90deg,
     rgba(234, 154, 42, 0.3),
     rgba(234, 154, 42, 0.7),
@@ -87,7 +113,7 @@ li {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shimmer 8.5s infinite 4s;
-}
+} */
 
 @keyframes shimmer {
   0% {
