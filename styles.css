@@ -244,9 +244,11 @@ li {
 @keyframes shimmer {
   0%,
   100% {
+    transform: scale(1);
     filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.4));
   }
   50% {
+    transform: scale(1.08);
     filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.8))
       drop-shadow(0 0 15px rgba(255, 215, 0, 0.6));
   }
