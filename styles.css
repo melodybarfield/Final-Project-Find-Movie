@@ -259,6 +259,77 @@ li {
 
 /* LANDING PAGE */
 
+.shape {
+  position: fixed;
+  filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.7));
+}
+
+.shape--1 {
+  width: 4%;
+  top: 10vh;
+  left: 5vw;
+}
+
+.shape--2 {
+  width: 5%;
+  top: 5vh;
+  left: 50vw;
+}
+
+.shape--3 {
+  width: 4%;
+  top: 11vh;
+  left: 80vw;
+}
+
+.shape--4 {
+  width: 4%;
+  top: 45vh;
+  left: 15vw;
+}
+
+.shape--5 {
+  width: 5%;
+  top: 70vh;
+  left: 30vw;
+}
+
+.shape--6 {
+  width: 5%;
+  top: 50vh;
+  left: 90vw;
+}
+
+.shape--7 {
+  width: 5%;
+  top: 60vh;
+  left: 70vw;
+}
+
+.shape--8 {
+  width: 5%;
+  top: 80vh;
+  left: 50vw;
+}
+
+.shape--9 {
+  width: 4%;
+  top: 80vh;
+  left: 80vw;
+}
+
+.shape--10 {
+  width: 5%;
+  top: 88vh;
+  left: 38vw;
+}
+
+.shape--11 {
+  width: 5%;
+  top: 70vh;
+  left: 3vw;
+}
+
 main .section__sub-title {
   margin-bottom: 32px;
 }
