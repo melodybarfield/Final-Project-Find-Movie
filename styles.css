@@ -256,77 +256,77 @@ li {
 }
 
 .shape--1 {
-  width: 4%;
+  width: 3%;
   top: 10vh;
   left: 5vw;
   animation: shimmer 2s ease-in-out infinite 2s;
 }
 
 .shape--2 {
-  width: 5%;
+  width: 4%;
   top: 5vh;
   left: 50vw;
   animation: shimmer 4s ease-in-out infinite;
 }
 
 .shape--3 {
-  width: 4%;
+  width: 3%;
   top: 11vh;
   left: 80vw;
   animation: shimmer 2s ease-in-out infinite 2s;
 }
 
 .shape--4 {
-  width: 4%;
+  width: 3%;
   top: 45vh;
   left: 15vw;
   animation: shimmer 5s ease-in-out infinite 2s;
 }
 
 .shape--5 {
-  width: 5%;
+  width: 4%;
   top: 70vh;
   left: 30vw;
   animation: shimmer 5s ease-in-out infinite 2s;
 }
 
 .shape--6 {
-  width: 5%;
+  width: 4%;
   top: 50vh;
   left: 90vw;
   animation: shimmer 4s ease-in-out infinite 2s;
 }
 
 .shape--7 {
-  width: 5%;
+  width: 4%;
   top: 60vh;
   left: 70vw;
   animation: shimmer 6s ease-in-out infinite;
 }
 
 .shape--8 {
-  width: 5%;
+  width: 4%;
   top: 80vh;
   left: 50vw;
   animation: shimmer 3s ease-in-out infinite 2s;
 }
 
 .shape--9 {
-  width: 4%;
+  width: 3%;
   top: 80vh;
   left: 80vw;
   animation: shimmer 5s ease-in-out infinite;
 }
 
 .shape--10 {
-  width: 5%;
+  width: 4%;
   top: 88vh;
   left: 38vw;
   animation: shimmer 3s ease-in-out infinite 2s;
 }
 
 .shape--11 {
-  width: 5%;
+  width: 4%;
   top: 70vh;
   left: 3vw;
   animation: shimmer 4s ease-in-out infinite;
