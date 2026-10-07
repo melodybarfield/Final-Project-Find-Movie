@@ -72,6 +72,7 @@ li {
   justify-content: center;
   align-items: center;
   font-size: 80px;
+  font-weight: 700;
   background: linear-gradient(
     to bottom,
     #fff8c7 0%,
@@ -88,7 +89,7 @@ li {
     2px 2px 0 #b47a00,
     3px 3px 0 #8c5e00,
     5px 5px 10px rgba(0, 0, 0, 0.45),
-    0 0 20px rgba(255, 215, 0, 0.35);
+    0 0 12px rgba(255, 248, 200, 0.45);
 }
 
 .section__sub-title {
