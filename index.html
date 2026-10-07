@@ -116,6 +116,43 @@
             <div class="img__logo--wrapper">
               <img src="./assets/logo_complex.png" class="img__logo" alt="" />
             </div>
+            <div class="modal__contact">
+              <i
+                class="fas fa-times modal__exit click"
+                onclick="toggleModal()"
+              ></i>
+              <h3 class="modal__title">Let us know how we do!</h3>
+              <h4 class="modal__sub-title">
+                Your feedback is important to us.
+              </h4>
+              <form id="contact__form" onsubmit="contact(event)">
+                <div class="form__item">
+                  <label class="form__item--label">Name</label>
+                  <input type="text" class="input" name="user_name" required />
+                </div>
+                <div class="form__item">
+                  <label class="form__item--label">Email</label>
+                  <input
+                    type="email"
+                    class="input"
+                    name="user_email"
+                    required
+                  />
+                </div>
+                <div class="form__item">
+                  <label class="form__item--label">Message</label>
+                  <textarea
+                    class="input"
+                    name="message"
+                    type="text"
+                    required
+                  ></textarea>
+                </div>
+                <button id="contact__submit" class="form__submit">
+                  Submit
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
