@@ -103,29 +103,6 @@ li {
   position: relative;
   color: #f5d77a;
 }
-/* background: linear-gradient(
-    90deg,
-    rgba(234, 154, 42, 0.3),
-    rgba(234, 154, 42, 0.7),
-    rgba(234, 154, 42, 0.3)
-  );
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 8.5s infinite 4s;
-} */
-
-@keyframes shimmer {
-  0% {
-    background-position: -200%;
-  }
-  50% {
-    background-position: 200%;
-  }
-  100% {
-    background-position: -200%;
-  }
-}
 
 .img__wrapper {
   height: 100%;
@@ -264,70 +241,92 @@ li {
   filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.7));
 }
 
+@keyframes shimmer {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.8))
+      drop-shadow(0 0 15px rgba(255, 215, 0, 0.6));
+  }
+}
+
 .shape--1 {
   width: 4%;
   top: 10vh;
   left: 5vw;
+  animation: shimmer 2s ease-in-out infinite 2s;
 }
 
 .shape--2 {
   width: 5%;
   top: 5vh;
   left: 50vw;
+  animation: shimmer 4s ease-in-out infinite;
 }
 
 .shape--3 {
   width: 4%;
   top: 11vh;
   left: 80vw;
+  animation: shimmer 2s ease-in-out infinite 2s;
 }
 
 .shape--4 {
   width: 4%;
   top: 45vh;
   left: 15vw;
+  animation: shimmer 5s ease-in-out infinite 2s;
 }
 
 .shape--5 {
   width: 5%;
   top: 70vh;
   left: 30vw;
+  animation: shimmer 5s ease-in-out infinite 2s;
 }
 
 .shape--6 {
   width: 5%;
   top: 50vh;
   left: 90vw;
+  animation: shimmer 4s ease-in-out infinite 2s;
 }
 
 .shape--7 {
   width: 5%;
   top: 60vh;
   left: 70vw;
+  animation: shimmer 6s ease-in-out infinite;
 }
 
 .shape--8 {
   width: 5%;
   top: 80vh;
   left: 50vw;
+  animation: shimmer 3s ease-in-out infinite 2s;
 }
 
 .shape--9 {
   width: 4%;
   top: 80vh;
   left: 80vw;
+  animation: shimmer 5s ease-in-out infinite;
 }
 
 .shape--10 {
   width: 5%;
   top: 88vh;
   left: 38vw;
+  animation: shimmer 3s ease-in-out infinite 2s;
 }
 
 .shape--11 {
   width: 5%;
   top: 70vh;
   left: 3vw;
+  animation: shimmer 4s ease-in-out infinite;
 }
 
 main .section__sub-title {
