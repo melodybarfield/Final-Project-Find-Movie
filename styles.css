@@ -10,7 +10,8 @@
 }
 
 body {
-  background-color: rgba(0, 65, 177);
+  /* background-color: rgba(0, 65, 177); */
+  background-color: rgba(0, 34, 81);
   max-width: 100vw;
   overflow-x: hidden;
 }
