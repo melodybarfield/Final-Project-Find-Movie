@@ -15,9 +15,6 @@
     <header>
       <nav>
         <div class="nav__wrapper">
-          <!-- <figure class="img__wrapper">
-            <img src="./assets/logo_small.png" alt="Logo" />
-          </figure> -->
           <ul class="nav__link-list">
             <li>
               <a href="#" class="nav__link gold">Home</a>
@@ -28,7 +25,12 @@
               >
             </li>
             <li>
-              <a href="#" class="nav__link gold btn-contact" onclick="toggleModal()">Contact</a>
+              <a
+                href="#"
+                class="nav__link gold btn-contact"
+                onclick="toggleModal()"
+                >Contact</a
+              >
             </li>
           </ul>
           <button class="btn__menu" onclick="openMenu()">
@@ -79,7 +81,11 @@
                 >
               </li>
               <li class="menu__list">
-                <a href="#contact" class="menu__link" onclick="closeMenu()" onclick="toggleModal()"
+                <a
+                  href="#contact"
+                  class="menu__link"
+                  onclick="closeMenu()"
+                  onclick="toggleModal()"
                   >Contact</a
                 >
               </li>
@@ -153,6 +159,12 @@
           </div>
           <button id="contact__submit" class="form__submit">Submit</button>
         </form>
+        <div class="modal__overlay modal__overlay--laoding">
+          <i class="fa-solid fa-spinner"></i>
+        </div>
+        <div class="modal__overlay modal__overlay--success">
+          " Thank you for your message. We appreciate your feedback!"
+        </div>
       </div>
     </div>
   </body>
