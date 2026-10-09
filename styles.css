@@ -268,7 +268,7 @@ li {
   visibility: visible;
 }
 
-.modal__contact {
+.modal .modal__contact {
   position: relative;
   transform: translateX(110%);
   background-color: rgba(0, 65, 177);
@@ -285,13 +285,31 @@ li {
   transform: translateX(0%);
 }
 
-.modal__exit {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  color: rgba(253, 192, 63);
-  font-size: 32px;
-  z-index: 100;
+.modal__header {
+  flex-shrink: 0;
+}
+
+.modal__body {
+  overflow-y: auto;
+  flex: 1;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(253, 192, 63) transparent;
+}
+
+.modal__body::-webkit-scrollbar {
+  width: 6px;
+}
+.modal__body::-webkit-scrollbar-thumb {
+  background: rgba(253, 192, 63);
+  border-radius: 10px;
+}
+
+.modal__body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal__footer {
+  flex-shrink: 0;
 }
 
 .modal__title {
@@ -341,6 +359,15 @@ textarea {
   padding: 8px 16px;
   margin-top: 56px;
   transition: all 300ms ease;
+}
+
+.modal__exit {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: rgba(253, 192, 63);
+  font-size: 32px;
+  z-index: 100;
 }
 
 /* MODAL OVERLAY */
