@@ -286,12 +286,12 @@ button {
 }
 
 .modal__contact::before {
-    content: "";
-    position: absolute;
-    inset: 6px;
-    border: 1px solid #f5d77a;
-    border-radius: 16px;
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid #f5d77a;
+  border-radius: 16px;
+  pointer-events: none;
 }
 
 .modal--open .modal__contact {
@@ -361,6 +361,16 @@ textarea {
   font-size: 20px;
 }
 
+/* prevents autofill styling */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: rgba(253, 192, 63);
+  -webkit-box-shadow: 0 0 0 1000px rgba(0, 65, 177) inset;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
 .form__submit {
   background-color: rgba(253, 192, 63);
   border: 2px solid rgba(253, 192, 63);
@@ -403,12 +413,12 @@ textarea {
 }
 
 .modal__overlay::before {
-    content: "";
-    position: absolute;
-    inset: 6px;
-    border: 1px solid #f5d77a;
-    border-radius: 16px;
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid #f5d77a;
+  border-radius: 16px;
+  pointer-events: none;
 }
 
 .modal__overlay--loading {
