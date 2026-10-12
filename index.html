@@ -10,6 +10,17 @@
       crossorigin="anonymous"
     ></script>
     <script src="index.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "lUInOT4KOXFuYh21a",
+        });
+      })();
+    </script>
   </head>
   <body>
     <header>
@@ -172,11 +183,11 @@
           </button>
         </div>
 
-        <div class="modal__overlay modal__overlay--laoding">
+        <div class="modal__overlay modal__overlay--loading">
           <i class="fa-solid fa-spinner"></i>
         </div>
         <div class="modal__overlay modal__overlay--success">
-          " Thank you for your message. We appreciate your feedback!"
+          " Thank you for your message.<br />We appreciate your feedback!"
         </div>
       </div>
     </div>
