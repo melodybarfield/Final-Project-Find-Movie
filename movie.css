@@ -15,6 +15,11 @@ body {
 }
 
 header {
+  background-image: url("./assets/pexels-pixabay-276005.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   background-color: rgba(229, 228, 226);
 }
 
@@ -45,6 +50,10 @@ li {
 
 button {
   cursor: pointer;
+}
+
+.section {
+  background-color: rgba(229, 228, 226);
 }
 
 /* NAVBAR*/
@@ -98,4 +107,10 @@ button {
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 32px;
+}
+
+.header__title {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0.4rem;
 }
