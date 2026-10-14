@@ -8,3 +8,9 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+
+body {
+  background-color: rgba(229, 228, 226);
+  max-width: 100vw;
+  overflow-x: hidden;
+}
