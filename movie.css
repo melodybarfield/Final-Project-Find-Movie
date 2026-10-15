@@ -73,12 +73,12 @@ button {
 }
 
 .nav__logo--img {
-  width: 160px;
+  width: 120px;
   height: auto;
 }
 
 .nav__link {
-  color: rgb(255, 255, 255);
+  color: rgb(34, 34, 33);
   font-size: 20px;
   font-weight: 600;
   margin-left: 16px;
@@ -103,14 +103,14 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: rgba(1, 30, 65);
+  /* color: rgba(1, 30, 65); */
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 32px;
 }
 
 .header__title {
-  color: red;
+  color: rgb(255, 255, 255);
   font-size: 32px;
   font-weight: 600;
   letter-spacing: 0.4rem;
