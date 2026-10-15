@@ -24,43 +24,45 @@
   </head>
   <body>
     <header>
-      <nav>
-        <div class="nav__wrapper">
-          <figure class="nav__logo--wrapper">
-            <img
-              src="./assets/transparent company logo.png"
-              alt="Company Logo"
-              class="nav__logo--img"
-            />
-          </figure>
-          <ul class="nav__link--list">
-            <li>
-              <a href="#" class="nav__link gold">Home</a>
-            </li>
-            <li>
-              <a href="#" class="nav__link nav__link--primary light-gold"
-                >Find Movie</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="nav__link gold btn-contact"
-                onclick="toggleModal()"
-                >Contact</a
-              >
-            </li>
-          </ul>
+      <div class="header__modal">
+        <nav>
+          <div class="nav__wrapper">
+            <figure class="nav__logo--wrapper">
+              <img
+                src="./assets/transparent company logo.png"
+                alt="Company Logo"
+                class="nav__logo--img"
+              />
+            </figure>
+            <ul class="nav__link--list">
+              <li>
+                <a href="#" class="nav__link gold">Home</a>
+              </li>
+              <li>
+                <a href="#" class="nav__link nav__link--primary light-gold"
+                  >Find Movie</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="nav__link gold btn-contact"
+                  onclick="toggleModal()"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="searchbar__wrapper">
+          <h1 class="header__title">Browse Movies</h1>
+          <input
+            type="text"
+            placeholder="Search by Title, Type or Year"
+            class="searchbar"
+          />
+          <button class="findMovie-btn">Find Movie</button>
         </div>
-      </nav>
-      <div class="searchbar__wrapper">
-        <h1 class="header__title">Browse Movies</h1>
-        <input
-          type="text"
-          placeholder="Search by Title, Type or Year"
-          class="searchbar"
-        />
-        <button class="findMovie-btn">Find Movie</button>
       </div>
     </header>
     <section class="search__results"></section>
