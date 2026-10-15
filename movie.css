@@ -117,7 +117,22 @@ button {
 }
 
 .header__modal {
-  background-color: rgba(255, 255, 255, 0.2); /* Must be semi-transparent */
-  backdrop-filter: blur(3px); /* Blurs the background image underneath */
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(
+    3px
+  ); /* 
   -webkit-backdrop-filter: blur(10px); /* Safari support */
+}
+
+.searchbar {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  margin: 16px 0;
+  border: none;
+  border-radius: 24px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: rgb(50, 47, 47);
+  font-size: 16px;
 }
