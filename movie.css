@@ -73,13 +73,14 @@ button {
 }
 
 .nav__logo--img {
-  width: 112px;
+  width: 184px;
   height: auto;
 }
 
 .nav__link {
   /* color: rgb(47, 47, 47); */
-  color: rgb(244, 173, 66);
+  /* color: rgb(244, 173, 66); */
+  color: rgba(234, 154, 42);
   text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.8);
   font-size: 18px;
   font-weight: 600;
@@ -144,9 +145,26 @@ button {
 
 .findMovie-btn {
   padding: 10px 22px;
-  background-color: rgb(244, 173, 66);
+  background-color: rgba(234, 154, 42);
   color: rgb(255, 255, 255);
   font-size: 16px;
   border: none;
   border-radius: 8px;
+}
+
+/* SECTION SEARCH RESULTS */
+
+.search__results {
+  background-color: rgba(3, 29, 65);
+}
+
+.container {
+  height: 100vh;
+  padding: 56px 0;
+}
+
+.row {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0px auto;
 }
