@@ -78,7 +78,9 @@ button {
 }
 
 .nav__link {
-  color: rgb(47, 47, 47);
+  /* color: rgb(47, 47, 47); */
+  color: rgb(244, 173, 66);
+  text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.8);
   font-size: 18px;
   font-weight: 600;
   margin-left: 16px;
@@ -113,6 +115,9 @@ button {
   font-size: 40px;
   font-weight: 500;
   letter-spacing: 0.4rem;
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.9),
+    0 0 12px rgba(255, 215, 0, 0.35);
 }
 
 .header__modal {
@@ -121,6 +126,7 @@ button {
     3px
   ); /* 
   -webkit-backdrop-filter: blur(10px); /* Safari support */
+  background: linear-gradient(rgba(3, 12, 28, 0.45), rgba(3, 12, 28, 0.45));
 }
 
 .searchbar {
