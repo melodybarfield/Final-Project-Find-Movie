@@ -52,6 +52,14 @@ button {
   cursor: pointer;
 }
 
+footer {
+  background: rgba(128, 128, 128);
+  color: white;
+  text-align: center;
+  padding: 8px;
+  margin-top: 4px;
+}
+
 .container {
   height: 100vh;
   padding: 56px 0;
@@ -191,4 +199,10 @@ button {
   padding: 16px;
   max-width: 1200px;
   color: rgba(234, 154, 42);
+}
+
+#sortSelect {
+  border: 1px solid gray;
+  border-radius: 16px;
+  margin-left: 8px;
 }
