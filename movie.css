@@ -71,10 +71,6 @@ footer {
   margin: 0px auto;
 }
 
-.hidden {
-  visibility: hidden;
-}
-
 /* NAVBAR*/
 
 .nav__wrapper {
@@ -135,7 +131,6 @@ footer {
 
 .menu__backdrop {
   position: absolute;
-  /* background-color: rgba(252, 241, 163); */
   background-color: rgba(229, 228, 226);
   height: 100vh;
   color: rgba(216, 122, 2);
