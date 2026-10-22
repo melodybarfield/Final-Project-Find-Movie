@@ -9,7 +9,17 @@
       src="https://kit.fontawesome.com/4efb33348e.js"
       crossorigin="anonymous"
     ></script>
-    
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "lUInOT4KOXFuYh21a",
+        });
+      })();
+    </script>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
@@ -152,5 +162,42 @@
     <footer>
       <p>Created by Melody Barfield. Powered by OMDBapi.</p>
     </footer>
+    <div class="modal">
+      <div class="modal__contact">
+        <div class="modal__header">
+          <i class="fa-solid fa-xmark modal__exit click" onclick="toggleModal()"></i>
+          <h3 class="modal__title">Let us know how we do!</h3>
+          <h4 class="modal__sub-title">Your feedback is important to us.</h4>
+        </div>
+        <div class="modal__body">
+          <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input type="text" class="input" name="user_name" required="">
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input type="email" class="input" name="user_email" required="">
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea class="input" name="message" type="text" required=""></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal__footer">
+          <button id="contact__submit" class="form__submit" form="contact__form">
+            Submit
+          </button>
+        </div>
+
+        <div class="modal__overlay modal__overlay--loading">
+          <i class="fa-solid fa-spinner"></i>
+        </div>
+        <div class="modal__overlay modal__overlay--success">
+          " Thank you for your message.<br>We appreciate your feedback!"
+        </div>
+      </div>
+    </div>
   </body>
 </html>
