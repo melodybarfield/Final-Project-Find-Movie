@@ -517,6 +517,11 @@ textarea:-webkit-autofill {
   margin-left: 8px;
 }
 
+.movie-card {
+  width: 100%;
+  margin: 0 auto;
+}
+
 /* RESPONSIVENESS */
 @media (max-width: 1024px) {
   .btn__menu {
