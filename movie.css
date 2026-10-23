@@ -494,7 +494,11 @@ textarea:-webkit-autofill {
 /* MAIN */
 
 .movie_display {
-  background-color: rgba(3, 29, 65);
+    background: linear-gradient(
+        to right,
+        rgb(3, 29, 65),
+        rgb(10, 45, 85)
+    );
 }
 
 .control_panel {

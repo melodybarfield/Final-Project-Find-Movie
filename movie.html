@@ -155,7 +155,14 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="movies__grid" id="moviesGrid"></div>
+          <div class="movies__grid" id="moviesGrid">
+            <div class="movie-card">
+              <img src="${poster}" alt="${movie.Title}" class="movie-card__img">
+              <h2 class="movie-card__title">${movie.Title}</h2>
+              <p class="movie-card__year">${movie.Year}</p>
+            </div>
+            <!-- <div class="movie-card__placeholder">Movie Poster <br> Not Available</div> -->
+          </div>
         </div>
       </div>
     </main>
