@@ -517,7 +517,7 @@ textarea:-webkit-autofill {
   margin-left: 8px;
 }
 
-.movies-grid {
+.movie-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
@@ -529,6 +529,26 @@ textarea:-webkit-autofill {
 .movie-card {
   width: 100%;
   margin: 0 auto;
+  text-align: center;
+}
+
+.movie-card__img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover; 
+  border-radius: 12px;
+  transition: all 300ms ease;
+}
+
+.movie-card__title {
+  color: rgba(229, 228, 226);
+  font-size: 16px;
+  margin: 10px 0 5px 0;
+}
+
+.movie-card__year {
+  margin: 0;
+  color: gray;
 }
 
 /* RESPONSIVENESS */
