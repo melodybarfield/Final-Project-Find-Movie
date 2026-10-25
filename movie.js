@@ -1,4 +1,5 @@
 let isModalOpen = false;
+const moviesGridEl = document.querySelector(".movies-grid");
 
 function openMenu() {
   document.body.classList += " menu--open";
@@ -40,3 +41,95 @@ function contact(event) {
       );
     });
 }
+
+const apiKey = "4c54bb9f";
+const movieGrid = document.getElementById("movieGrid");
+const searchButton = document.getElementById("searchButton");
+const searchInput = document.getElementById("searchInput");
+
+searchButton.addEventListener("click", function () {
+  const query = searchInput.value;
+  fetchMovies(query);
+});
+
+async function fetchMovies(query) {
+  const promise = await fetch(
+    `https://www.omdbapi.com/?s=${query}&apikey=${apiKey}`,
+  );
+  const data = await promise.json();
+  displayMovies(data.Search);
+}
+
+function displayMovies(movies) {
+  movieGrid.innerHTML = "";
+  if (!movies) {
+    movieGrid.innerHTML = "<p>No movies found.</p>";
+    return;
+  }
+
+  movies.forEach((movie) => {
+    const movieElement = document.createElement("div");
+    movieElement.classList.add("movie-card");
+    movieElement.innerHTML = `
+    <img src="${movie.Poster}" alt="${movie.Title}" class="movie-card__img">
+    <h2 class="movie-card__title">${movie.Title}</h2>
+    <p class="movie-card__year">${movie.Year}</p>
+    `;
+    movieGrid.appendChild(movieElement);
+  });
+}
+
+// fetchMovies("batman");
+
+// let moviesData;
+
+// async function fetchMovies() {
+//   const movies = await fetch(
+//     "https://www.omdbapi.com/?i=tt3896198&apikey=4c54bb9f&s",
+//   );
+//   const moviesData = await movies.json();
+//   console.log(moviesData);
+// }
+// fetchMovies();
+
+// console.log(moviesData);
+
+// console.log(moviesData);
+
+// function displayMovies(movies) {
+//   const movieResults = movies
+//     .map((movie) => {
+//       const poster = movie.Poster !== "N/A" ? movie.Poster : "";
+//       return `<div class="movie-card">
+//                     <img src="${poster}" alt="${movie.Title}" class="movie-card__img">
+//                     <h2 class="movie-card__title">${movie.Title}</h2>
+//                     <p class="movie-card__year">${movie.Year}</p>
+//                 </div>`;
+//     })
+//     .join("");
+// }
+
+// displayMovies(moviesData);
+
+// async function fetchMovies() {
+//   const movies = await fetch(
+//     "https://www.omdbapi.com/?i=tt3896198&apikey=4c54bb9f&s",
+//   );
+//   const moviesData = await movies.json();
+//   console.log(moviesData);
+//   console.log(moviesGridEl);
+//   moviesGridEl.innerHTML = movies.map((movie) => movieHTML(movie)).join("");
+//   console.log(moviesGridEl.innerHTML);
+// }
+
+// fetchMovies();
+
+// function movieHTML(movie) {
+//   return `<div class="movie-card">
+//               <img src="${movie.Poster}" alt="${movie.Title}" class="movie-card__img">
+//               <h2 class="movie-card__title">${movie.Title}</h2>
+//               <p class="movie-card__year">${movie.Year}</p>
+//             </div>`;
+// }
+
+// movieHTML();

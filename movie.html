@@ -129,11 +129,12 @@
           <div class="input__wrapper">
             <input
               type="text"
-              placeholder="Search by Title, Type or Year"
+              placeholder="Search for a movie..."
               class="searchbar"
+              id="searchInput"
             />
             <div class="img__wrapper">
-              <i class="fa-solid fa-magnifying-glass search__button"></i>
+              <i class="fa-solid fa-magnifying-glass search__button" id="searchButton"></i>
             </div>
           </div>
         </div>
@@ -155,9 +156,9 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="movies-grid" id="moviesGrid">
+          <div class="movie-grid" id="movieGrid">
             <div class="movie-card">
-              <img src="${poster}" alt="${movie.Title}" class="movie-card__img">
+              <img src="${movie.Poster}" alt="${movie.Title}" class="movie-card__img">
               <h2 class="movie-card__title">${movie.Title}</h2>
               <p class="movie-card__year">${movie.Year}</p>
             </div>
