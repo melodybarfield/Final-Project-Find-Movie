@@ -53,10 +53,10 @@ searchButton.addEventListener("click", function () {
 });
 
 async function fetchMovies(query) {
-  const promise = await fetch(
-    `https://www.omdbapi.com/?s=${query}&apikey=${apiKey}`,
+  const response = await fetch(
+    `https://www.omdbapi.com/?s=${encodeURIComponent(query)}&apikey=${apiKey}`,
   );
-  const data = await promise.json();
+  const data = await response.json();
   displayMovies(data.Search);
 }
 
