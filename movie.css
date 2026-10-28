@@ -494,18 +494,13 @@ textarea:-webkit-autofill {
 /* MAIN */
 
 .movie_display {
-  background: linear-gradient(
+    background: linear-gradient(
         to right,
-        rgba(3, 29, 65, 1) 0%,
-        rgba(20, 52, 85, 1) 45%,
-        rgba(100, 117, 137, 1) 75%,
-        rgba(229, 228, 226, 1) 100%
+        rgb(65, 91, 120) 0%,
+        rgb(91, 113, 139) 35%,
+        rgb(139, 153, 170) 70%,
+        rgb(195, 197, 199) 100%
     );
-    /* background: linear-gradient(
-        to right,
-        rgb(3, 29, 65),
-        rgb(10, 45, 85)
-    ); */
 }
 
 .control_panel {
@@ -531,24 +526,46 @@ textarea:-webkit-autofill {
   max-width: 1200px;
   justify-content: center;
   margin: -20px auto;
+  cursor: pointer;
 }
 
 .movie-card {
   width: 100%;
   margin: 0 auto;
   text-align: center;
+  background: #C8D0D9;
+    border: 1px solid rgba(25, 48, 75, 0.2);
+    border-radius: 12px;
+
+    box-shadow:
+        0 6px 16px rgba(25, 48, 75, 0.18),
+        0 2px 5px rgba(25, 48, 75, 0.10);
+
+    overflow: hidden;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(229, 228, 226, 0.85);
+
+    box-shadow:
+        0 14px 28px rgba(0, 0, 0, 0.35),
+        0 0 18px rgba(229, 228, 226, 0.22);
 }
 
 .movie-card__img {
   width: 100%;
   aspect-ratio: 2 / 3;
   object-fit: cover; 
-  border-radius: 12px;
+  border-radius: 12px 12px 0 0;
   transition: all 300ms ease;
 }
 
 .movie-card__title {
-  color: rgba(229, 228, 226);
+  color: rgb(65, 91, 120);
   font-size: 16px;
   margin: 10px 0 5px 0;
 }
