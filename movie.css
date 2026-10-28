@@ -64,11 +64,9 @@ button {
 }
 
 footer {
-  background: rgba(128, 128, 128);
-  color: white;
+  color: rgb(65, 91, 120);
   text-align: center;
   padding: 8px;
-  margin-top: 4px;
   flex-shrink: 0;
 }
 
