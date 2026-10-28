@@ -57,7 +57,7 @@ async function fetchMovies(query) {
     `https://www.omdbapi.com/?s=${encodeURIComponent(query)}&apikey=${apiKey}`,
   );
   const data = await response.json();
-  displayMovies(data.Search);
+  displayMovies(data.Search.slice(0, 8));
 }
 
 function displayMovies(movies) {
