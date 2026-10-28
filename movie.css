@@ -21,9 +21,9 @@ body {
   flex-direction: column;
 }
 
-main {
+/* main {
   flex: 1 0 auto;
-}
+} */
 
 header {
   background-image: url("./assets/pexels-pixabay-276005.jpg");
@@ -511,6 +511,13 @@ textarea:-webkit-autofill {
         rgb(139, 153, 170) 70%,
         rgb(195, 197, 199) 100%
     );
+    /* background: linear-gradient(
+        to right,
+        rgb(153, 174, 195) 0%,
+        rgb(163, 181, 199) 35%,
+        rgb(179, 192, 205) 70%,
+        rgb(204, 208, 212) 100%
+    ); */
 }
 
 .control_panel {
