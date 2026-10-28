@@ -1,5 +1,9 @@
 let isModalOpen = false;
 const moviesGridEl = document.querySelector(".movies-grid");
+const apiKey = "4c54bb9f";
+const movieGrid = document.getElementById("movieGrid");
+const searchButton = document.getElementById("searchButton");
+const searchInput = document.getElementById("searchInput");
 
 function openMenu() {
   document.body.classList += " menu--open";
@@ -42,14 +46,20 @@ function contact(event) {
     });
 }
 
-const apiKey = "4c54bb9f";
-const movieGrid = document.getElementById("movieGrid");
-const searchButton = document.getElementById("searchButton");
-const searchInput = document.getElementById("searchInput");
+function searchMovies() {
+    const query = searchInput.value.trim();
+    if (query === "") {
+        movieGrid.innerHTML = "";
+        return
+    }
+    fetchMovies(query);
+}
 
-searchButton.addEventListener("click", function () {
-  const query = searchInput.value;
-  fetchMovies(query);
+searchButton.addEventListener("click", searchMovies);
+searchInput.addEventListener('keydown', function(event) {
+    if (event.key === "Enter") {
+        searchMovies()
+    }
 });
 
 async function fetchMovies(query) {
