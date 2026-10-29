@@ -4,6 +4,7 @@ const apiKey = "4c54bb9f";
 const movieGrid = document.getElementById("movieGrid");
 const searchButton = document.getElementById("searchButton");
 const searchInput = document.getElementById("searchInput");
+const results__Info = document.getElementById("resultsInfo");
 
 function openMenu() {
   document.body.classList += " menu--open";
@@ -47,19 +48,19 @@ function contact(event) {
 }
 
 function searchMovies() {
-    const query = searchInput.value.trim();
-    if (query === "") {
-        movieGrid.innerHTML = "";
-        return
-    }
-    fetchMovies(query);
+  const query = searchInput.value.trim();
+  if (query === "") {
+    movieGrid.innerHTML = "";
+    return;
+  }
+  fetchMovies(query);
 }
 
 searchButton.addEventListener("click", searchMovies);
-searchInput.addEventListener('keydown', function(event) {
-    if (event.key === "Enter") {
-        searchMovies()
-    }
+searchInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    searchMovies();
+  }
 });
 
 async function fetchMovies(query) {
@@ -86,5 +87,7 @@ function displayMovies(movies) {
     <p class="movie-card__year">${movie.Year}</p>
     `;
     movieGrid.appendChild(movieElement);
+
+    results__Info.innerHTML = `Showing: ${searchInput.value}`;
   });
 }
