@@ -68,10 +68,10 @@ async function fetchMovies(query) {
     `https://www.omdbapi.com/?s=${encodeURIComponent(query)}&apikey=${apiKey}`,
   );
   const data = await response.json();
-  displayMovies(data.Search.slice(0, 8));
+  displayMovies(data.Search.slice(0, 8), query);
 }
 
-function displayMovies(movies) {
+function displayMovies(movies, searchedMovie) {
   movieGrid.innerHTML = "";
   if (!movies) {
     movieGrid.innerHTML = "<p>No movies found.</p>";
@@ -88,6 +88,7 @@ function displayMovies(movies) {
     `;
     movieGrid.appendChild(movieElement);
 
-    results__Info.innerHTML = `Showing: ${searchInput.value}`;
+    results__Info.textContent = `Showing: ${searchedMovie}`;
+    searchInput.value = "";
   });
 }
