@@ -5,6 +5,7 @@ const movieGrid = document.getElementById("movieGrid");
 const searchButton = document.getElementById("searchButton");
 const searchInput = document.getElementById("searchInput");
 const results__Info = document.getElementById("resultsInfo");
+const loadingSpinner = document.querySelector(".movie__loading-spinner");
 
 function openMenu() {
   document.body.classList += " menu--open";
@@ -64,15 +65,31 @@ searchInput.addEventListener("keydown", function (event) {
 });
 
 async function fetchMovies(query) {
-  const response = await fetch(
-    `https://www.omdbapi.com/?s=${encodeURIComponent(query)}&apikey=${apiKey}`,
-  );
-  const data = await response.json();
-  displayMovies(data.Search.slice(0, 8), query);
+  loadingSpinner.style.display = "block";
+
+  // Temporary delay for testing
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+
+  try {
+    const response = await fetch(
+      `https://www.omdbapi.com/?s=${encodeURIComponent(query)}&apikey=${apiKey}`,
+    );
+    const data = await response.json();
+    displayMovies(data.Search.slice(0, 8), query);
+  } catch (error) {
+    console.log("Something went wrong:", error);
+    movieGrid.innerHTML = "<p>Something went wrong.<br> Please try again.</p>";
+  } finally {
+    loadingSpinner.style.display = "none";
+  }
 }
 
 function displayMovies(movies, searchedMovie) {
   movieGrid.innerHTML = "";
+
+  results__Info.textContent = `Showing: ${searchedMovie}`;
+  searchInput.value = "";
+
   if (!movies) {
     movieGrid.innerHTML = "<p>No movies found.</p>";
     return;
@@ -87,8 +104,5 @@ function displayMovies(movies, searchedMovie) {
     <p class="movie-card__year">${movie.Year}</p>
     `;
     movieGrid.appendChild(movieElement);
-
-    results__Info.textContent = `Showing: ${searchedMovie}`;
-    searchInput.value = "";
   });
 }

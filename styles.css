@@ -424,7 +424,7 @@ textarea:-webkit-autofill {
 
 .modal__overlay--loading {
   background-color: rgba(0, 65, 177);
-  font-size: 80px;
+  font-size: 60px;
 }
 
 .modal__overlay--success {

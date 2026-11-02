@@ -493,7 +493,7 @@ textarea:-webkit-autofill {
   cursor: pointer;
 }
 
-.fa-solid {
+.modal__loading-spinner {
   display: inline-block;
   font-size: inherit;
   height: 1em;
@@ -590,6 +590,17 @@ textarea:-webkit-autofill {
 .movie-card__year {
   margin: 0;
   color: gray;
+}
+
+.movie__loading-spinner {
+  font-size: 24px;
+  color: rgba(234, 154, 42);
+  font-size: 60px;
+  display: none;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%)
 }
 
 /* RESPONSIVENESS */
