@@ -5,7 +5,10 @@ const movieGrid = document.getElementById("movieGrid");
 const searchButton = document.getElementById("searchButton");
 const searchInput = document.getElementById("searchInput");
 const results__Info = document.getElementById("resultsInfo");
+const sortSelect = document.querySelector("#sortSelect");
 const loadingSpinner = document.querySelector(".movie__loading-spinner");
+let currentMovies = [];
+let currentSearch = "";
 
 function openMenu() {
   document.body.classList += " menu--open";
@@ -75,7 +78,9 @@ async function fetchMovies(query) {
       `https://www.omdbapi.com/?s=${encodeURIComponent(query)}&apikey=${apiKey}`,
     );
     const data = await response.json();
-    displayMovies(data.Search.slice(0, 8), query);
+    currentMovies = data.Search || [];
+    currentSearch = query;
+    displayMovies(currentMovies.slice(0, 8), currentSearch);
   } catch (error) {
     console.log("Something went wrong:", error);
     movieGrid.innerHTML = "<p>Something went wrong.<br> Please try again.</p>";
@@ -106,3 +111,19 @@ function displayMovies(movies, searchedMovie) {
     movieGrid.appendChild(movieElement);
   });
 }
+
+function sortMovies() {
+  let sortedMovies = [...currentMovies];
+  if (sortSelect.value === "a-z") {
+    sortedMovies.sort((a, b) => a.Title.localeCompare(b.Title));
+  } else if (sortSelect.value === "z-a") {
+    sortedMovies.sort((a, b) => b.Title.localeCompare(a.Title));
+  } else if (sortSelect.value === "newest") {
+    sortedMovies.sort((a, b) => parseInt(b.Year) - parseInt(a.Year));
+  } else if (sortSelect.value === "oldest") {
+    sortedMovies.sort((a, b) => parseInt(a.Year) - parseInt(b.Year));
+  }
+  displayMovies(sortedMovies.slice(0, 8), currentSearch);
+}
+
+sortSelect.addEventListener("change", sortMovies);
