@@ -579,6 +579,15 @@ textarea:-webkit-autofill {
   object-fit: cover; 
   border-radius: 12px 12px 0 0;
   transition: all 300ms ease;
+
+  /* Only applies and affects fallback when no poster is available */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+  background-color: #C8D0D9;
+  color: rgb(65, 91, 120);
+  padding: 1rem;
 }
 
 .movie-card__title {

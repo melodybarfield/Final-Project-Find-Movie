@@ -70,7 +70,6 @@ searchInput.addEventListener("keydown", function (event) {
 async function fetchMovies(query) {
   loadingSpinner.style.display = "block";
 
-  // Temporary delay for testing
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
   try {
@@ -102,12 +101,23 @@ function displayMovies(movies, searchedMovie) {
 
   movies.forEach((movie) => {
     const movieElement = document.createElement("div");
+    const poster = movie.Poster && movie.Poster !== "N/A" ? movie.Poster : "";
     movieElement.classList.add("movie-card");
     movieElement.innerHTML = `
-    <img src="${movie.Poster}" alt="${movie.Title}" class="movie-card__img">
+    ${poster ? `<img src="${poster}" alt="${movie.Title}" class="movie-card__img">` : `<div class="movie-card__img">No poster available</div>`}
     <h2 class="movie-card__title">${movie.Title}</h2>
     <p class="movie-card__year">${movie.Year}</p>
     `;
+
+    if (poster) {
+      const img = movieElement.querySelector("img");
+      img.addEventListener("error", () => {
+        const fallback = document.createElement("div");
+        fallback.className = "movie-card__img";
+        fallback.textContent = "No poster available";
+        img.replaceWith(fallback);
+      });
+    }
     movieGrid.appendChild(movieElement);
   });
 }
