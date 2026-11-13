@@ -592,15 +592,6 @@ textarea:-webkit-autofill {
   object-fit: cover; 
   border-radius: 12px 12px 0 0;
   transition: filter 300ms ease;
-
-  /* Only applies and affects fallback when no poster is available */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center; 
-  background-color: #102C50;
-  color: #F4D276;
-  padding: 1rem;
 }
 
 .movie-card__title {
@@ -613,6 +604,50 @@ textarea:-webkit-autofill {
   margin: 0;
   color: #D0D8E2;
 }
+
+
+.movie-card__placeholder {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 1rem;
+    text-align: center;
+
+    background: linear-gradient(
+        145deg,
+        #102C50,
+        #031D41
+    );
+
+    color: #F4D276;
+    border-radius: 12px 12px 0 0;
+}
+
+.placeholder__star {
+    font-size: 2rem;
+    color: #E99A25;
+    text-shadow: 0 0 12px rgba(233, 154, 37, 0.4);
+}
+
+.movie-card__placeholder p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.placeholder__brand {
+    font-size: 0.65rem;
+    color: #D0D8E2;
+}
+
 
 .movie__loading-spinner {
   font-size: 24px;

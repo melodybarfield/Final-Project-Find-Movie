@@ -114,19 +114,37 @@ function displayMovies(movies, searchedMovie) {
   movies.forEach((movie) => {
     const movieElement = document.createElement("div");
     const poster = movie.Poster && movie.Poster !== "N/A" ? movie.Poster : "";
+
     movieElement.classList.add("movie-card");
+
     movieElement.innerHTML = `
-    ${poster ? `<img src="${poster}" alt="${movie.Title}" class="movie-card__img">` : `<div class="movie-card__img">No poster available</div>`}
+
+    ${
+      poster
+        ? `<img src="${poster}" alt="${movie.Title}" class="movie-card__img">`
+        : `<div class="movie-card__placeholder">
+    <span class="placeholder__star">✦</span>
+    <p>Poster Unavailable</p>
+    <span class="placeholder__brand">Missouri's Greatest Movie Library</span></div>`
+    }
+
     <h2 class="movie-card__title">${movie.Title}</h2>
+
     <p class="movie-card__year">${movie.Year}</p>
     `;
 
     if (poster) {
       const img = movieElement.querySelector("img");
+
       img.addEventListener("error", () => {
         const fallback = document.createElement("div");
-        fallback.className = "movie-card__img";
-        fallback.textContent = "No poster available";
+
+        fallback.className = "movie-card__placeholder";
+        fallback.innerHTML = `
+          <span class="placeholder__star">✦</span>
+          <p>Poster Unavailable</p>
+          <span class="placeholder__brand">Missouri's Greatest Movie Library</span>
+        `;
         img.replaceWith(fallback);
       });
     }
