@@ -504,13 +504,13 @@ textarea:-webkit-autofill {
 /* MAIN */
 
 .movie_display {
-    background: linear-gradient(
+    /* background: linear-gradient(
         to right,
         rgb(65, 91, 120) 0%,
         rgb(91, 113, 139) 35%,
         rgb(139, 153, 170) 70%,
         rgb(195, 197, 199) 100%
-    );
+    ); */
     /* background: linear-gradient(
         to right,
         rgb(153, 174, 195) 0%,
@@ -518,6 +518,12 @@ textarea:-webkit-autofill {
         rgb(179, 192, 205) 70%,
         rgb(204, 208, 212) 100%
     ); */
+    background: linear-gradient(
+        to right,
+        #031D41 0%,
+        #102C50 55%,
+        #193A60 100%
+    );
 }
 
 .control_panel {
