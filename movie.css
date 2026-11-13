@@ -556,27 +556,34 @@ textarea:-webkit-autofill {
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  background: #C8D0D9;
+  /* background: #C8D0D9;
     border: 1px solid rgba(25, 48, 75, 0.2);
     border-radius: 12px;
 
     box-shadow:
         0 6px 16px rgba(25, 48, 75, 0.18),
-        0 2px 5px rgba(25, 48, 75, 0.10);
+        0 2px 5px rgba(25, 48, 75, 0.10); */
+    background: #193A60;
+    border: 1px solid #526D8B;
+    border-radius: 12px;
+
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.25);
 
     overflow: hidden;
     transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
 }
 
 .movie-card:hover {
     transform: translateY(-6px);
 
-    border-color: rgba(229, 228, 226, 0.85);
+    border-color: rgba(233, 154, 37, 0.75);
 
     box-shadow:
         0 14px 28px rgba(0, 0, 0, 0.35),
-        0 0 18px rgba(229, 228, 226, 0.22);
+        0 0 18px rgba(223, 154, 37, 0.18);
 }
 
 .movie-card__img {
@@ -584,27 +591,27 @@ textarea:-webkit-autofill {
   aspect-ratio: 2 / 3;
   object-fit: cover; 
   border-radius: 12px 12px 0 0;
-  transition: all 300ms ease;
+  transition: filter 300ms ease;
 
   /* Only applies and affects fallback when no poster is available */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center; 
-  background-color: #C8D0D9;
-  color: rgb(65, 91, 120);
+  background-color: #102C50;
+  color: #F4D276;
   padding: 1rem;
 }
 
 .movie-card__title {
-  color: rgb(65, 91, 120);
+  color: #F4D276;
   font-size: 16px;
   margin: 10px 0 5px 0;
 }
 
 .movie-card__year {
   margin: 0;
-  color: gray;
+  color: #D0D8E2;
 }
 
 .movie__loading-spinner {
