@@ -132,12 +132,21 @@
               Find your next Favorite Movie
             </h2>
             <div class="input__wrapper">
-              <input
+              <!-- <input
                 type="text"
                 placeholder="Search by Title, Type or Year"
                 class="searchbar"
-              />
-              <button class="findMovie-btn">Find Movie</button>
+              /> -->
+              <form action="http://127.0.0.1:5500/movie.html" method="get">
+                <input
+                  type="text"
+                  name="movie"
+                  placeholder="Search by Title, Type or Year"
+                  class="searchbar"
+                  required
+                />
+                <button type="submit" class="findMovie-btn">Find Movie</button>
+              </form>
             </div>
             <div class="img__logo--wrapper">
               <img src="./assets/logo_complex.png" class="img__logo" alt="" />

@@ -137,3 +137,19 @@ function sortMovies() {
 }
 
 sortSelect.addEventListener("change", sortMovies);
+
+window.addEventListener("DOMContentLoaded", () => {
+  // 1. Read the URL parameters from the browser address bar
+  const urlParams = new URLSearchParams(window.location.search);
+  const lookedForMovie = urlParams.get("movie");
+
+  // 2. Check if a movie title was passed in the URL
+  if (lookedForMovie) {
+    // 3. Find the search input box on Website 2 and fill it with the movie title
+    const searchInput = document.getElementById("searchInput");
+    searchInput.value = lookedForMovie;
+
+    // 4. Trigger your existing search function to display the movie posters
+    fetchMovies(lookedForMovie);
+  }
+});
