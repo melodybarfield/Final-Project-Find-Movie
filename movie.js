@@ -10,6 +10,8 @@ const loadingSpinner = document.querySelector(".movie__loading-spinner");
 let currentMovies = [];
 let currentSearch = "";
 
+// Open and close the burger menu for the website for smaller screens
+
 function openMenu() {
   document.body.classList += " menu--open";
 }
@@ -17,6 +19,8 @@ function openMenu() {
 function closeMenu() {
   document.body.classList.remove("menu--open");
 }
+
+// Toggle the modal for contact form
 
 function toggleModal() {
   if (isModalOpen) {
@@ -26,6 +30,8 @@ function toggleModal() {
   isModalOpen = true;
   document.body.classList += " modal--open";
 }
+
+// Handle contact form submission and send email using EmailJS
 
 function contact(event) {
   event.preventDefault();
@@ -51,6 +57,8 @@ function contact(event) {
     });
 }
 
+// Search movies based on user input and trigger the fetchMovies function
+
 function searchMovies() {
   const query = searchInput.value.trim();
   if (query === "") {
@@ -66,6 +74,8 @@ searchInput.addEventListener("keydown", function (event) {
     searchMovies();
   }
 });
+
+// Fetch movies from the OMDB API based on the search query
 
 async function fetchMovies(query) {
   loadingSpinner.style.display = "block";
@@ -87,6 +97,8 @@ async function fetchMovies(query) {
     loadingSpinner.style.display = "none";
   }
 }
+
+// Display movies in the grid based on the search query dynamically creating div elements for each movie
 
 function displayMovies(movies, searchedMovie) {
   movieGrid.innerHTML = "";
@@ -122,6 +134,8 @@ function displayMovies(movies, searchedMovie) {
   });
 }
 
+// Sort movies using dropdown selection
+
 function sortMovies() {
   let sortedMovies = [...currentMovies];
   if (sortSelect.value === "a-z") {
@@ -137,6 +151,8 @@ function sortMovies() {
 }
 
 sortSelect.addEventListener("change", sortMovies);
+
+// Catches searched word from first website and triggers auto-search
 
 window.addEventListener("DOMContentLoaded", () => {
   // 1. Read the URL parameters from the browser address bar
