@@ -118,11 +118,6 @@ footer {
   transform: scale(1.1);
 }
 
-.nav__link--primary {
-  /* color: rgba(213, 143, 51); */
-  padding: 16px 0;
-}
-
 /* HAMBURGER MENU BACKDROP */
 
 .btn__menu {
