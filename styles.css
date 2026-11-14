@@ -127,7 +127,7 @@ button {
 }
 
 .nav__link {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   margin-left: 16px;
   padding: 8px;
@@ -136,11 +136,6 @@ button {
 
 .nav__link:hover {
   transform: scale(1.1);
-}
-
-.nav__link--primary {
-  font-size: 28px;
-  padding: 16px 0;
 }
 
 /* HAMBURGER MENU BACKDROP */
