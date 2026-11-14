@@ -43,13 +43,20 @@ button {
   cursor: pointer;
 }
 
+footer {
+  color: rgba(234, 154, 42);
+  text-align: center;
+  padding: 8px;
+  flex-shrink: 0;
+}
+
 .serif-font {
   font-family: "Playfair Display", serif;
   font-style: italic;
 }
 
 .container {
-  padding: 56px 0;
+  padding: 40px 0;
 }
 
 .row {
