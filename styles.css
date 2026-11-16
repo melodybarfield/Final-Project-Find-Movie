@@ -129,7 +129,7 @@ footer {
   display: flex;
   justify-content: end;
   align-items: center;
-  padding: 0px 32px;
+  padding: 0px 16px;
   margin: 0 auto;
 }
 
@@ -639,5 +639,15 @@ main .section__sub-title {
 
   .star--7 {
     top: 45vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn__menu {
+    display: block;
+  }
+
+  .nav__link-list {
+    display: none;
   }
 }
