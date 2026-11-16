@@ -183,7 +183,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.getElementById("searchInput");
     searchInput.value = lookedForMovie;
 
-    // 4. Trigger your existing search function to display the movie posters
+    // 4. Trigger existing search function to display the movie posters
     fetchMovies(lookedForMovie);
   }
 });

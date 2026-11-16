@@ -608,6 +608,7 @@ textarea:-webkit-autofill {
 }
 
 /* RESPONSIVENESS */
+
 @media (max-width: 1024px) {
   .btn__menu {
     display: block;
