@@ -647,14 +647,6 @@ textarea:-webkit-autofill {
     padding-bottom: 16px;
   }
 
-  .btn__menu {
-    display: block;
-  }
-
-  .nav__link-list {
-    display: none;
-  }
-
   .section__title {
     font-size: 26px;
     text-shadow:

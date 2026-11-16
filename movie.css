@@ -528,6 +528,7 @@ textarea:-webkit-autofill {
   gap: 20px;
   max-width: 1200px;
   justify-content: center;
+  padding: 0 24px;
   margin: -20px auto;
   cursor: pointer;
 }
@@ -634,5 +635,35 @@ textarea:-webkit-autofill {
 
   .nav__link--list {
     display: none;
+  }
+
+  .header__title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .nav__logo--img {
+    width: 136px;
+  }
+
+  .btn__menu--svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header__title {
+    font-size: 24px;
+    letter-spacing: 0.2rem;
+  }
+
+  .movie-grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
