@@ -545,10 +545,6 @@ textarea:-webkit-autofill {
   animation: shimmer 4s ease-in-out infinite;
 }
 
-main .section__sub-title {
-  margin-bottom: 32px;
-}
-
 .input__wrapper {
   display: flex;
   align-items: center;
@@ -643,11 +639,44 @@ main .section__sub-title {
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 32px;
+  }
+
   .btn__menu {
     display: block;
   }
 
   .nav__link-list {
     display: none;
+  }
+
+  .section__title {
+    font-size: 26px;
+    text-shadow:
+      5px 5px 10px rgba(0, 0, 0, 0.5),
+      0 0 12px rgba(255, 248, 200, 0.3);
+  }
+
+  .section__sub-title {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .btn__menu--svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .input__wrapper form {
+    flex-direction: column;
+  }
+
+  .img__logo {
+    width: 80%;
+  }
+
+  footer p {
+    font-size: 12px;
   }
 }
