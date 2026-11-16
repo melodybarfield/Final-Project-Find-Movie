@@ -504,20 +504,6 @@ textarea:-webkit-autofill {
 /* MAIN */
 
 .movie_display {
-  /* background: linear-gradient(
-        to right,
-        rgb(65, 91, 120) 0%,
-        rgb(91, 113, 139) 35%,
-        rgb(139, 153, 170) 70%,
-        rgb(195, 197, 199) 100%
-    ); */
-  /* background: linear-gradient(
-        to right,
-        rgb(153, 174, 195) 0%,
-        rgb(163, 181, 199) 35%,
-        rgb(179, 192, 205) 70%,
-        rgb(204, 208, 212) 100%
-    ); */
   background: linear-gradient(to right, #031d41 0%, #102c50 55%, #193a60 100%);
 }
 
@@ -550,13 +536,6 @@ textarea:-webkit-autofill {
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  /* background: #C8D0D9;
-    border: 1px solid rgba(25, 48, 75, 0.2);
-    border-radius: 12px;
-
-    box-shadow:
-        0 6px 16px rgba(25, 48, 75, 0.18),
-        0 2px 5px rgba(25, 48, 75, 0.10); */
   background: #193a60;
   border: 1px solid #526d8b;
   border-radius: 12px;
@@ -572,8 +551,7 @@ textarea:-webkit-autofill {
 
 .movie-card:hover {
   transform: translateY(-6px);
-
-  border-color: rgba(233, 154, 37, 0.75);
+  border: 3px solid rgba(233, 154, 37, 0.75);
 
   box-shadow:
     0 14px 28px rgba(0, 0, 0, 0.35),
