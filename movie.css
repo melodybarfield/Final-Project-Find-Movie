@@ -223,13 +223,12 @@ footer {
 /* MODAL */
 
 .modal {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 550px;
-  width: 96%;
-  max-width: 1100px;
+  height: min(700px, calc(100vh - 32px));
+  width: min(90%, 1100px);
   border-radius: 20px;
   overflow: hidden;
   display: flex;
@@ -253,7 +252,9 @@ footer {
   background-color: rgba(229, 228, 226);
   color: rgba(3, 29, 65);
   width: 100%;
-  padding: 40px 72px;
+  min-height: 0;
+  overflow-y: auto;
+  padding: clamp(20px, 5vw, 72px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -301,7 +302,7 @@ footer {
 }
 
 .modal__title {
-  font-size: 32px;
+  font-size: 24px;
   padding-bottom: 10px;
   padding-top: 32px;
 }
@@ -366,7 +367,7 @@ textarea:-webkit-autofill {
   top: 30px;
   right: 30px;
   color: rgba(3, 29, 65);
-  font-size: 32px;
+  font-size: 24px;
   z-index: 100;
   cursor: pointer;
 }
@@ -453,10 +454,7 @@ textarea:-webkit-autofill {
 
 .header__modal {
   background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(
-    3px
-  ); /* 
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  backdrop-filter: blur(3px);
   background: linear-gradient(rgba(3, 12, 28, 0.45), rgba(3, 12, 28, 0.45));
 }
 
@@ -639,6 +637,24 @@ textarea:-webkit-autofill {
 
   .header__title {
     text-align: center;
+  }
+
+  .modal .modal__contact {
+    justify-content: flex-start;
+    padding: 20px;
+  }
+
+  .modal__title {
+    padding-top: 10px;
+  }
+
+  .modal__sub-title {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+
+  .form__submit {
+    margin-top: 16px;
   }
 }
 
