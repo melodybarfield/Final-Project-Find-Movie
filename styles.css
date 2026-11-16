@@ -643,6 +643,10 @@ textarea:-webkit-autofill {
     padding: 32px;
   }
 
+  .nav__wrapper {
+    padding-bottom: 16px;
+  }
+
   .btn__menu {
     display: block;
   }
