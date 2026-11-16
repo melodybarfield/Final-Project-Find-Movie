@@ -245,13 +245,12 @@ footer {
 /* MODAL */
 
 .modal {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 700px;
-  width: 90%;
-  max-width: 1100px;
+  height: min(700px, calc(100vh - 32px));
+  width: min(90%, 1100px);
   border-radius: 20px;
   overflow: hidden;
   display: flex;
